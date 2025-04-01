@@ -12,5 +12,94 @@ body{
     background-blend-mode: darken;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
+    align-items: center;
+    height: 100svh;
+    justify-content: center;
 }
 
+#left{
+    width: 15svw;
+    height: 97svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    #tobs{
+        margin-top: 50px;
+        width: 100%;
+        border: 1px solid #c5c6c7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+    #bob{
+        height:10%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    button{
+        height: 45px;
+        width: 90%;
+        font-size: 1rem;
+        border-radius: 24px;
+        background-color: #1f2833;
+        color: #c5c6c7;
+        border: none;
+        color: #c5c6c7;
+    }
+    button:hover{
+        background-color: #66fcf1;
+            color: #0b0c10;
+    }
+    #logout{
+        background: transparent;
+        color: rgba(255, 0, 0, 0.358);
+        
+    }
+    #logout:hover{
+        background-color: rgba(255, 0, 0, 0.326);
+        color: black;
+
+    }
+}
+
+#right{
+    width: 84svw;
+    height: 97svh;
+    border: 1px solid#c5c6c7;
+    display: flex;
+    flex-direction: column;
+    #top{
+        height: 10%;
+        width: 100%;
+        border: 1px solid #c5c6c7;
+    }
+    main{
+        height: 90%;
+        width: 100%;
+    }
+    #passes{
+        height: 100%;
+        width: 100%;
+        border: 1px solid #c5c6c7;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 55px;
+        gap: 55px;
+        justify-content: space-between;
+        overflow-y: scroll;
+        #create , #data{
+            height: 250px;
+            width: 550px;
+            border: 1px solid #c5c6c7;
+        }
+    }
+    #passes::-webkit-scrollbar{
+        display: none;
+    }
+}
