@@ -9,17 +9,19 @@
 <body>
     <div id="left">
         <div id="tobs">
-            <button>Passwords</button>
-            <button>Passwords</button>
+            <button onclick="Activate('profile')">Profile</button>
+            <button onclick="Activate('passwords')">Passwords</button>
         </div>
         <div id="bob">
             <button id="logout">LOGOUT !</button>
         </div>
     </div>
     <div id="right">
-        <div id="top"></div>
+        <div id="top">
+            <h1>Profile</h1>
+        </div>
         <main>
-            <div id="passes">
+            <div id="passwords">
                 <div id="data"></div>
                 <div id="data"></div>
                 <div id="data"></div>
@@ -27,7 +29,11 @@
                 <div id="create">
                 </div>
             </div>
+            <div id="profile">
+
+            </div>
         </main>
     </div>
+    <script src="/static/js/dash.js"></script>
 </body>
 </html>
