@@ -38,11 +38,13 @@ body{
         border-radius: 20px 0 0 20px;
     }
     #bob{
-        height:10%;
-        width: 100%;
+        margin-bottom: 30px;
+        height: 10svh;
         display: flex;
         justify-content: center;
         align-items: center;
+        border: 1px solid #c5c6c7;
+        border-radius: 20px 0 0 20px;
     }
     button{
         font-family: Courier;
@@ -65,7 +67,7 @@ body{
 #right{
     width: 84svw;
     height: 97svh;
-    border: 1px solid#c5c6c7;
+    border-left: 1px solid#c5c6c7;
     display: flex;
     flex-direction: column;
     #top{
@@ -86,7 +88,7 @@ body{
     main{
         height: 90%;
         width: 100%;
-        border: 1px solid #c5c6c7;
+        /* border: 1px solid #c5c6c7; */
     }
     #passwords{
         height: 100%;
@@ -109,5 +111,60 @@ body{
     #profile{
         height: 100%;
         width: 100%;
+        display: flex;
+        #pleft{
+            height: 100%;
+            width: 30%;
+            display: flex;
+            /* background-color: #45829e; */
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #c5c6c7;
+            #profileimg{
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                background-color: #c5c6c7;
+                border: 1px solid #c5c6c7;
+                opacity: 0.5;
+            }
+        }
+        #pright{
+            color: #c5c6c7;
+            height: 100%;
+            width: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 100px;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+            .data{
+                height: 100px;
+                width: 300px;
+                /* border: 1px solid #c5c6c7; */
+                .value{
+                    height: 50%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: 'Courier New', Courier, monospace;
+                    border-radius: 15px;
+                    background-color: #1f2833;
+                    color: #c5c6c7;
+                }
+                h1{
+                    background: linear-gradient(#c5c6c7,#45829e);
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    font-size: 1.5rem;
+                }
+            }
+        }
     }
 }
