@@ -20,7 +20,7 @@ from App import views as app
 from Auth import views as auth
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',app.index,name="home"),
+    path(' ',app.index,name="home"),
     path('Signup',auth.signup,name="Signup"),
     path('Login',auth.login,name="Login"),
     path('Dashboard',app.dash,name="Dashboard"),
