@@ -24,4 +24,6 @@ urlpatterns = [
     path('Signup',auth.signup,name="Signup"),
     path('Login',auth.login,name="Login"),
     path('Dashboard',app.dash,name="Dashboard"),
+    path('verify',auth.verify,name="verify"),
+    path('logout',auth.logout,name="logout"),
 ]

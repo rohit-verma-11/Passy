@@ -1,8 +1,20 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from Auth.models import Passwords as passes
 
 # Create your views here.
 def index(request):
-    return render(request,'index.html')
+    try:
+        email = request.session['email']
+        password = request.session['password']
+        print(email,password)
+        return redirect('Dashboard')  # Redirect to the dashboard after successful login
+    except KeyError:
+        return render(request,'index.html')
 
 def dash(request):
-    return render(request,'dash.html')
+    email = request.session['email']
+    passess = passes.objects.filter(user=email)# will return all the passwords of the user
+    #to be completed
+    print(passess)
+    print(email)
+    return render(request,'dash.html',{'name':'Passy'})
