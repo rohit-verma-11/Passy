@@ -15,6 +15,13 @@ def dash(request):
     email = request.session['email']
     passess = passes.objects.filter(user=email)# will return all the passwords of the user
     #to be completed
+    context = {}
+    try:
+        data = passes.objects.get(user=email)
+        context['data'] = data
+        print(data)
+    except:
+        print(context) 
     print(passess)
     print(email)
     return render(request,'dash.html',{'name':'Passy'})

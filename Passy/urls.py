@@ -26,4 +26,5 @@ urlpatterns = [
     path('Dashboard',app.dash,name="Dashboard"),
     path('verify',auth.verify,name="verify"),
     path('logout',auth.logout,name="logout"),
+    path('create',auth.create,name="create"),
 ]

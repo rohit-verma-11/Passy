@@ -15,11 +15,12 @@
             <div id="left">
                 <h2>New to Passy</h2>
                 <p>Create your Passy account</p>
-                <form action="">
+                <form action="create" method="POST">
+                    {% csrf_token %}
                     <label for="Email">Email</label><br>
-                    <input type="email" name="" id="Email" placeholder="m@example.com" required><br>
+                    <input type="email" name="email" id="Email" placeholder="m@example.com" required><br>
                     <label for="Password" >Password</label><br>
-                    <input type="password" name="" id="Password" required><br>
+                    <input type="password" name="Password" id="Password" required><br>
                     <button type="submit">Create Account</button>
                     {% comment %} <a href="">Forgot your password?</a> {% endcomment %}
                 </form>
@@ -45,5 +46,8 @@
             <p>By clicking continue, you agree to our <a href="">Terms of Services</a> and <a href="">Privacy Policy</a></p>
         </div>
     </main>
+    {% if error%}
+        <script>alert("{{error}}")</script>
+    {% endif %}
 </body>
 </html>

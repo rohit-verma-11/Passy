@@ -3,7 +3,7 @@ from .models import Credentials
 # Create your views here.
 
 def signup(request):
-    return render(request,'signup.html')
+    return render(request,'signup.html',{'error':None})
 
 
 def login(request):
@@ -17,6 +17,7 @@ def verify(request):
         try:
             user = Credentials.objects.get(email=email, password=password)
             request.session['email'] = user.email    # Store user ID in session for later use
+            print(user)
             request.session['password'] = user.password    # Store user name in session for later use
             return redirect('Dashboard')  # Redirect to the dashboard after successful login
         except Credentials.DoesNotExist:
@@ -30,3 +31,17 @@ def logout(request):
     except KeyError:
         pass  # Ignore if the session variables do not exist
     return redirect('home')  # Redirect to home page after logout
+
+def create(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        password = request.POST.get('Password')
+        print(email,password)
+        try:
+            user = Credentials.objects.create(email=email,password=password)
+            user.save()
+            return redirect('Login')  # Redirect to login page after successful signup
+        except :
+            return render(request,'signup.html',{'error':'Account already exists'})
+    # Handle the case where the email already exists in the database
+    return redirect('signup')  # Redirect to signup page if the request method is not POST
