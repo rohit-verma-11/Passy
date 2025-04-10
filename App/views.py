@@ -25,3 +25,6 @@ def dash(request):
     print(passess)
     print(email)
     return render(request,'dash.html',{'name':'Passy'})
+
+def create():
+    print('create')
