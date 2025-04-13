@@ -95,6 +95,8 @@ body{
         /* border: 1px solid #c5c6c7; */
     }
     #passwords{
+        scroll-behavior: smooth;
+        scrollbar-gutter: stable;
         height: 100%;
         width: 100%;
         display: flex;
@@ -121,6 +123,7 @@ body{
             scale: 1.05;
             color:#c5c6c7;
             font-size: 5rem;
+            transition: all 1s ease-in-out;
         }
         #create:active{
             transform: translateY(4px);
